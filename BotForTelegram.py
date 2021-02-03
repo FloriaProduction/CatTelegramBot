@@ -224,7 +224,7 @@ def Keyboard(message):
                     bot.send_message(message.chat.id, Notes)
             elif message.text.lower() == "/notes удалить" and Enabled == 1:
                 try:
-                    os.remove('C:/TelegramBot/FilesUsers/' + message.chat.username + '/Notes.txt')
+                    os.remove(DiskC + r"FilesUsers/' + message.chat.username + '/Notes.txt')
                     bot.send_message(message.chat.id, "Заметки удалены")
                     Error = "-1"
                 except:
