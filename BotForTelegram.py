@@ -687,7 +687,7 @@ def handle_docs_photo(message):
     global Debug
     global Random
     # проверка на пользователя
-    FileX = open(DiskC + r"\Users.txt", "rt", encoding='utf8')
+    FileX = open(DiskC + r"/Users.txt", "rt", encoding='utf8')
     TextFileX = FileX.read()
     UsersWithAccess = []
     UsersWithAccess = TextFileX.rsplit()
@@ -699,7 +699,7 @@ def handle_docs_photo(message):
         if Time_2 >= Time3 and Time_2 <= Time2:
             OnOffBot = 1
             # Debug
-            FileX = open(DiskC + r"\Bot\Variables.txt", "rt", encoding='utf8')
+            FileX = open(DiskC + r"/Bot/Variables.txt", "rt", encoding='utf8')
             TextFileX = FileX.readlines()
             Debug = TextFileX[0]
             FileX.close()
