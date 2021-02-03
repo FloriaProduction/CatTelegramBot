@@ -165,12 +165,7 @@ def Keyboard(message):
             if Debug == "1":
                 print("\033[42m\033[30mСейчас бот вкл\033[0m")
         else:
-            bot.send_message(message.chat.id, "*сплю*")
-            bot.send_sticker(message.chat.id, "CAACAgIAAxkBAAJxe1_KZ6KYEiJ6rps4TQf3DAzh-TXyAAKwPQAC4KOCB9Hlip3uzqVUHgQ")
-            OnOffBot = 0
-            FirstStart = 2
-            if Debug == "1":
-                print(message.chat.username + "(отправка текста): \033[41m\033[30mСейчас бот выкл\033[0m")
+          pass
     # если он не спит
     if OnOffBot == 1:
         # проверка на пользователя
