@@ -693,27 +693,6 @@ def handle_docs_photo(message):
     UsersWithAccess = TextFileX.rsplit()
     FileX.close()
     Error = 0
-    # проверяем, спит бот или нет
-    if WhileEnabled == 1:
-        Time_2 = str(time.strftime("%H")) + str(time.strftime("%M") + str(time.strftime("%S")))
-        if Time_2 >= Time3 and Time_2 <= Time2:
-            OnOffBot = 1
-            # Debug
-            FileX = open(DiskC + r"/Bot/Variables.txt", "rt", encoding='utf8')
-            TextFileX = FileX.readlines()
-            Debug = TextFileX[0]
-            FileX.close()
-            Debug = re.sub(" |\n", "", Debug)
-
-            if Debug == "1":
-                print("\033[42m\033[30mСейчас бот вкл\033[0m")
-        else:
-            bot.send_message(message.chat.id, "*сплю*")
-            bot.send_sticker(message.chat.id, "CAACAgIAAxkBAAJxe1_KZ6KYEiJ6rps4TQf3DAzh-TXyAAKwPQAC4KOCB9Hlip3uzqVUHgQ")
-            OnOffBot = 0
-            FirstStart = 2
-            if Debug == "1":
-                print(message.chat.username + "(отправка файла): \033[41m\033[30mСейчас бот выкл\033[0m")
     # сохранение файлов
     if OnOffBot == 1:
         # проверка на пользователя
