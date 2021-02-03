@@ -183,7 +183,8 @@ def Keyboard(message):
                         print("-список прочитан успешно")
                     break
                 except:
-                    FileX = open(DiskC + r"/FilesUsers/" + message.chat.username + '/Notes.txt', 'w', encoding='utf8')
+                    
+                    FileX = open(DiskC + r"/FilesUsers/" + message.chat.username + '/Notes.txt', 'w+', encoding='utf8')
                     FileX.close()
                     if Debug == "1":
                         bot.send_message(message.chat.id, 'Заметки успешно были созданы')
