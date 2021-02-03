@@ -16,7 +16,7 @@ Password = "-419106290"  # пароль от бота
 FirstStartBot = 1  # самый первый запуск бота
 FirstStart = 2  # первый запуск бота
 Enabled = 1  # вкл/выкл бот
-OnOffBot = 0  # 1 - вкл, 0 - выкл
+OnOffBot = 1  # 1 - вкл, 0 - выкл
 Stage1 = 0  # номер стадии1
 Stage2 = 0  # номер стадии2
 Stage3 = 0  # номер стадии3
@@ -150,23 +150,6 @@ def Keyboard(message):
     global Debug
     global Notes
     global NotesRead
-    # узнаем, бот спит или нет
-    if WhileEnabled == 1:
-        Time_2 = str(time.strftime("%H")) + str(time.strftime("%M") + str(time.strftime("%S")))
-        if Time_2 >= Time3 and Time_2 <= Time2:
-            OnOffBot = 1
-            # Debug
-            FileX = open(DiskC + r"/Bot/Variables.txt", "rt", encoding='utf8')
-            TextFileX = FileX.readlines()
-            Debug = TextFileX[0]
-            FileX.close()
-            Debug = re.sub(" |\n", "", Debug)
-
-            if Debug == "1":
-                print("\033[42m\033[30mСейчас бот вкл\033[0m")
-        else:
-          pass
-    # если он не спит
     if OnOffBot == 1:
         # проверка на пользователя
         FileX = open(DiskC + r"/Users.txt", "rt", encoding='utf8')
