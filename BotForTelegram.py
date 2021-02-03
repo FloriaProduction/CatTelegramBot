@@ -77,7 +77,7 @@ CommandMe = "Меня зовут - " + Namebot + "\nМеня создал - @MrM
 SendStickers = 1  # 0 - уже стикер отправлен, 1 - все еще можно отправить стикер
 # сам код
 
-filepath = DiskC + r"\Users.txt"
+filepath = DiskC + r"/Users.txt"
 FileX = open(filepath, "rt", encoding='utf8')
 TextFileX = FileX.read()
 UsersWithAccess = []
@@ -156,7 +156,7 @@ def Keyboard(message):
         if Time_2 >= Time3 and Time_2 <= Time2:
             OnOffBot = 1
             # Debug
-            FileX = open(DiskC + r"\Bot\Variables.txt", "rt", encoding='utf8')
+            FileX = open(DiskC + r"/Bot/Variables.txt", "rt", encoding='utf8')
             TextFileX = FileX.readlines()
             Debug = TextFileX[0]
             FileX.close()
@@ -174,7 +174,7 @@ def Keyboard(message):
     # если он не спит
     if OnOffBot == 1:
         # проверка на пользователя
-        FileX = open(DiskC + r"\Users.txt", "rt", encoding='utf8')
+        FileX = open(DiskC + r"/Users.txt", "rt", encoding='utf8')
         TextFileX = FileX.read()
         UsersWithAccess = []
         UsersWithAccess = TextFileX.rsplit()
